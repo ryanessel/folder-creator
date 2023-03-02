@@ -1,0 +1,11 @@
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\bin\Debug\folder-creator-manager.exe.config
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\bin\Debug\folder-creator-manager.exe
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\bin\Debug\folder-creator-manager.pdb
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\obj\Debug\folder-creator-manager.csproj.AssemblyReference.cache
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\obj\Debug\folder-creator-manager.csproj.SuggestedBindingRedirects.cache
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\obj\Debug\folder_creator_manager.FrmFolderCreator3000.resources
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\obj\Debug\folder_creator_manager.Properties.Resources.resources
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\obj\Debug\folder-creator-manager.csproj.GenerateResource.cache
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\obj\Debug\folder-creator-manager.csproj.CoreCompileInputs.cache
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\obj\Debug\folder-creator-manager.exe
+C:\Users\spuct\Dropbox\NCA WORK\Javascript Study\folder-creator\folder-creator-manager\obj\Debug\folder-creator-manager.pdb
