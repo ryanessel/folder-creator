@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace folder_creator_manager
 {
@@ -32,9 +33,14 @@ namespace folder_creator_manager
         private void btnChooseFldrPath_Click(object sender, EventArgs e)
         {
          
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             DialogResult result = folderDlg1.ShowDialog();
             txtCurrentDirBox.Text = folderDlg1.SelectedPath;
+            if(folderDlg1.SelectedPath == "")
+            {
+                return;
+            }
+
             Directory.SetCurrentDirectory($@"{folderDlg1.SelectedPath}");
         }
 
@@ -57,6 +63,38 @@ namespace folder_creator_manager
 
                 Directory.CreateDirectory($"{txtFolderName.Text}");
                 txtFolderName.Text = "";
+            }
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox1.SelectedIndex== 0) 
+            {
+                Directory.SetCurrentDirectory("C:\\Users\\spuct\\Dropbox\\NCA WORK\\Work Files\\SIEMENS PO + Siemens Documents");
+                txtCurrentDirBox.Text = "C:\\Users\\spuct\\Dropbox\\NCA WORK\\Work Files\\SIEMENS PO + Siemens Documents";
+            }
+
+            if (comboBox1.SelectedIndex == 1)
+            {
+                MessageBox.Show("PLidco");
+
+            }
+        }
+
+        private void btnOpenCurrentDirectory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("explorer.exe", ".");
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception here.
             }
         }
     }

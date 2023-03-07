@@ -34,6 +34,8 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.btnChooseFldrPath = new System.Windows.Forms.Button();
             this.txtCurrentDirBox = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnOpenCurrentDirectory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreateFolder
@@ -89,15 +91,42 @@
             this.txtCurrentDirBox.Size = new System.Drawing.Size(316, 40);
             this.txtCurrentDirBox.TabIndex = 3;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "POs to SIEMENS",
+            "POs to PLIDCO"});
+            this.comboBox1.Location = new System.Drawing.Point(16, 70);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 28);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            // 
+            // btnOpenCurrentDirectory
+            // 
+            this.btnOpenCurrentDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenCurrentDirectory.Location = new System.Drawing.Point(215, 70);
+            this.btnOpenCurrentDirectory.Name = "btnOpenCurrentDirectory";
+            this.btnOpenCurrentDirectory.Size = new System.Drawing.Size(316, 40);
+            this.btnOpenCurrentDirectory.TabIndex = 0;
+            this.btnOpenCurrentDirectory.Text = "Open Current Directory";
+            this.btnOpenCurrentDirectory.UseVisualStyleBackColor = true;
+            this.btnOpenCurrentDirectory.Click += new System.EventHandler(this.btnOpenCurrentDirectory_Click);
+            // 
             // FrmFolderCreator3000
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtCurrentDirBox);
             this.Controls.Add(this.txtFolderName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnChooseFldrPath);
+            this.Controls.Add(this.btnOpenCurrentDirectory);
             this.Controls.Add(this.btnCreateFolder);
             this.Name = "FrmFolderCreator3000";
             this.Text = "Folder Creator 3000";
@@ -115,6 +144,8 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button btnChooseFldrPath;
         private System.Windows.Forms.TextBox txtCurrentDirBox;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnOpenCurrentDirectory;
     }
 }
 
