@@ -24,6 +24,7 @@ namespace folder_creator_manager
             if (txtCurrentDirBox.Text == "") txtCurrentDirBox.Text = "Please choose path";
         }
         FolderBrowserDialog folderDlg1 = new FolderBrowserDialog();
+        
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
         {
 
@@ -32,9 +33,16 @@ namespace folder_creator_manager
         // Setting Current Directory
         private void btnChooseFldrPath_Click(object sender, EventArgs e)
         {
-         
+
+            // purpose is to get the 
+            string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+
+
+
             folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            // related to this --> idk why folderBrowserDialog1.SelectedPath= currentDirectory;
             DialogResult result = folderDlg1.ShowDialog();
+
             txtCurrentDirBox.Text = folderDlg1.SelectedPath;
             if(folderDlg1.SelectedPath == "")
             {
