@@ -90,6 +90,7 @@
             this.txtCurrentDirBox.Name = "txtCurrentDirBox";
             this.txtCurrentDirBox.Size = new System.Drawing.Size(316, 40);
             this.txtCurrentDirBox.TabIndex = 3;
+            this.txtCurrentDirBox.TextChanged += new System.EventHandler(this.txtCurrentDirBox_TextChanged);
             // 
             // comboBox1
             // 

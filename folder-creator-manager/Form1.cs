@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace folder_creator_manager
 {
@@ -68,17 +69,27 @@ namespace folder_creator_manager
 
             else if (!Directory.Exists($"{txtFolderName.Text}"))
             {
-
+                string originalDirectory = Directory.GetCurrentDirectory();
                 Directory.CreateDirectory($"{txtFolderName.Text}");
+                Directory.SetCurrentDirectory($"{Directory.GetCurrentDirectory()}" +  $"\\{txtFolderName.Text}");
+                //MessageBox.Show(Directory.GetCurrentDirectory());
+                Process.Start("explorer.exe", ".");
                 txtFolderName.Text = "";
+                //new---> pupose is to reset to selected dir but not the folder you just made
+                if(comboBox1.SelectedIndex == 0) Directory.SetCurrentDirectory(siemensPath);
+                if(comboBox1.SelectedIndex == 1) Directory.SetCurrentDirectory(plidcoPath);
+
+                txtCurrentDirBox.Text= Directory.GetCurrentDirectory();
             }
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-          
+
         }
 
+         string plidcoPath  =  "C:\\Users\\spuct\\Dropbox\\NCA WORK\\Work Files\\PLIDCO\\NCA POs";
+        string siemensPath = "C:\\Users\\spuct\\Dropbox\\NCA WORK\\Work Files\\SIEMENS PO + Siemens Documents";
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(comboBox1.SelectedIndex== 0) 
@@ -89,7 +100,9 @@ namespace folder_creator_manager
 
             if (comboBox1.SelectedIndex == 1)
             {
-                MessageBox.Show("PLidco");
+                
+                Directory.SetCurrentDirectory("C:\\Users\\spuct\\Dropbox\\NCA WORK\\Work Files\\PLIDCO\\NCA POs");
+                txtCurrentDirBox.Text = "C:\\Users\\spuct\\Dropbox\\NCA WORK\\Work Files\\PLIDCO\\NCA POs";
 
             }
         }
@@ -104,6 +117,11 @@ namespace folder_creator_manager
             {
                 // Handle the exception here.
             }
+        }
+
+        private void txtCurrentDirBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
